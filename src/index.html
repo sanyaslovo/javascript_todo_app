@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpack starter</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+</head>
+<body>
+<div class="todo-app">
+    <header class="todo-app__header">
+        <form class="todo-app__form">
+            <input
+                    id="input"
+                    name="todo"
+                    class="form-control todo-app__input"
+                    placeholder="What you need to do?"
+                    autocomplete="off">
+
+            <button class="todo-app__submit btn btn-primary"><i class="material-icons">add</i>
+            </button>
+        </form>
+    </header>
+
+    <ul id="list" class="todo-list list-group">
+        <li class="todo-list__item input-group mb-3">
+<!--            <div class="input-group-prepend">-->
+<!--                <div class="input-group-text">-->
+<!--                    <input type="checkbox">-->
+<!--                </div>-->
+<!--            </div>-->
+            <label>
+                <input type="checkbox" />
+                <span>
+
+            <input
+                    value="Some text"
+                    aria-label="Some text"
+                    class="todo-list__input-text form-control"
+                    type="text"
+                    readonly>
+                    Red</span>
+            </label>
+            <div class="todo-list__controls input-group-append">
+                <button class="btn btn-warning btn-sm">
+                    <span class="material-icons">edit</span>
+                </button>
+                <button class="btn btn-danger btn-sm">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+        </li>
+    </ul>
+
+    <div class="todo-app__tabs btn-group" role="group">
+        <button id="all" type="button" class="btn btn-primary">All</button>
+        <button id="completed" type="button" class="btn btn-outline-primary">Completed</button>
+        <button id="uncompleted" type="button" class="btn btn-outline-primary">Uncompleted</button>
+        <button id="clear" type="button" class="btn btn-outline-primary">Clear completed</button>
+    </div>
+</div>
+</body>
+</html>
