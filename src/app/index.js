@@ -40,7 +40,6 @@ class TodoApp extends TodoList {
 
   renderTodos(todos = this.todos) {
     this.#list.innerHTML = '';
-    // this.todos = todos.sort((a, b) => a.isDone - b.isDone);
     todos.forEach((todo) => {
       const todoLi = this.createTodo(todo);
       this.#list.appendChild(todoLi);
@@ -167,6 +166,7 @@ const completedBtn = document.querySelector('#completed');
 const uncompletedBtn = document.querySelector('#uncompleted');
 const clearCompletedBtn = document.querySelector('#clear');
 
+// eslint-disable-next-line no-unused-vars
 const todoApp = new TodoApp(
   todoForm,
   todoList,
@@ -176,4 +176,3 @@ const todoApp = new TodoApp(
   uncompletedBtn,
   clearCompletedBtn,
 );
-console.log(todoApp);
