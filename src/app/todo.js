@@ -14,7 +14,6 @@ export default class TodoList {
 
   constructor() {
     const storageTodos = JSON.parse(localStorage.getItem('todos'));
-
     this.todos = storageTodos || [];
   }
 
@@ -29,6 +28,7 @@ export default class TodoList {
     };
     this.todos.unshift(todo);
     this.renderTodos();
+    localStorage.setItem('todos', JSON.stringify(this.todos));
     // eslint-disable-next-line consistent-return
     return todo;
   }
@@ -45,7 +45,6 @@ export default class TodoList {
           isDone,
         };
       }
-
       return todo;
     });
     this.todos = this.todos.sort((a, b) => a.isDone - b.isDone);
